@@ -1,0 +1,71 @@
+$prefix = 'et-'
+
+.{$prefix}progress
+  &-wave
+    stroke-width 0
+
+    &-left
+      stroke rgba(40, 148, 255, .3)
+      fill rgba(40, 148, 255, .3)
+      animation waveLeftMove .6s linear 0ms infinite
+
+    &-right
+      stroke rgba(40, 148, 255, .7)
+      fill rgba(40, 148, 255, .7)
+      animation waveRightMove .6s linear 0ms infinite
+
+  &-bubble
+    fill rgb(255, 255, 255)
+    fill-opacity .5
+
+  &-bomb
+    stroke-width 2
+    stroke rgba(255, 255, 255, .5)
+
+    &-top
+      animation bombTopMove .6s linear 0ms infinite
+
+    &-right
+      animation bombRightMove .6s linear 0ms infinite
+
+    &-bottom
+      animation bombBottomMove .6s linear 0ms infinite
+
+    &-left
+      animation bombLeftMove .6s linear 0ms infinite
+
+@keyframes waveLeftMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(200px, 0px)
+
+@keyframes waveRightMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(-200px, 0px)
+
+@keyframes bombTopMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(0px, -8px)
+
+@keyframes bombRightMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(8px, 0px)
+
+@keyframes bombBottomMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(0px, 8px)
+
+@keyframes bombLeftMove
+  from
+    transform translate(0px, 0px)
+  to
+    transform translate(-8px, 0px)
